@@ -89,7 +89,12 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-app.use(express.static(path.join(__dirname, "public")));
+const publicDir = path.join(__dirname, "public");
+app.use(express.static(publicDir));
+
+app.get("/", (_req, res) => {
+  res.sendFile(path.join(publicDir, "index.html"));
+});
 
 app.get("/healthz", (_req, res) => {
   res.json({ ok: true, rooms: rooms.size });
