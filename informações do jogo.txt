@@ -1,0 +1,11 @@
+Nome do jogo: Cartada Royale
+Estilo: 2D
+Categoria: Movimentação + Ação
+Controles (mobile): D-Pad e Toque
+Controles (desktop): WASD, shift e mouse
+Condição de vitória: Ter mais eliminações do que os outros
+UI (mobile): Exemplo na imagem ideia de hud mobile.png
+UI (desktop): Similar ao do mobile só que com apenas as cartas aparecendo
+Camera do jogo: Mostra apenas ao redor do jogador (indicadores na tela vão mostrar a posição dos jogadores e de cartas que vão nascer fora da tela)
+Animações(deslizar, pular, morrer, etc): Faça as animações e a aparência do personagem pode ser um stickman (podem ser apenas um frame)
+Adicionais na movimentação: É possível deslizar e pular para uma mobilidade mais tática

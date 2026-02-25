@@ -1,0 +1,11 @@
+Reparos para a v1.1:
+
+1)Fazer o jogo ser plataforma ao invés de 8 direções
+2)Mudar o background para uma cor sólida
+3)Fazer a animação de andando apenas quando andar
+
+Problemas no mobile: 
+1) Fazer com que os icones de seta do d-pad e os botões deslizar e pular não se tornem selecionáveis (quando é tocado e segurado qualquer um desses botões aparece a opção de copiar texto)
+2) Deixar os controles d-pad mais fluídos simplesmente fazendo que os jogador possa parar de andar se não estiver tocando exatamente no botão (ou seja, se ele apertar na seta para direita e arrastar o dedo para fora da seta o movimento para direita será parado e se o jogador ainda continuar tocando na tela e passar o dedo para a outra seta fazer a ação da seta)
+
+
