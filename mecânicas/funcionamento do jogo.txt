@@ -1,0 +1,7 @@
+Funcionamento do jogo:
+
+Os jogadores vão se deparar com uma tela inicial para colocarem seus nomes e criar uma sala (capacidade máxima 6), entrar em uma existente por meio de uma lista de salas ou colocando o código de uma sala existente.
+Após a sala ser criada o host vai ficar em uma tela de espera podendo iniciar o jogo quando quiser. 
+Quando a partida for iniciada, uma contagem de 3 segundos aparecerá na tela e os jogadores em um mapa que suporta no máximo 6 pessoas vão entrar em combate em uma rodada de 2 minutos (mostre o temporizador na tela).
+Sendo que a forma de causar dano uns aos outros é usando cartas que vão aparecer 2 aleatoriamente a cada 10 segundos (utilize as imagens que eu fiz para os icones das cartas tanto quando nascem pelo mapa quanto para ficar no inventário)
+Quando o tempo limite de 2 minutos se esgotar, o jogo se encerra e vai aparecer na tela de todos os jogadores o ranque de maiores quantidades de eliminações e na tela do host 2 botões (um de reiniciar ou sair)

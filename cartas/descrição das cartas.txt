@@ -1,0 +1,6 @@
+Descrição das cartas:
+Carta de Dash: O jogador avança rapidamente para a frente (pode ser usado no ar)
+Carta de Velocidade: Aumenta a velocidade de movimento do jogador por 3 segundos
+Carta de Disparo: O jogador efetua um disparo em linha reta que causa 35 de dano
+Carta de Bomba: O jogador arremessa uma bomba para frente que causa 30 de dano (a bomba é jogada seguindo uma trajetória de arco)
+Carta de Cura: O jogador cura 20 de vida

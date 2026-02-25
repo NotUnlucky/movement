@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Cartada Royale</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="orientation-overlay" class="overlay hidden">
+      <div class="overlay-card">
+        <h2>Gire o celular</h2>
+        <p>Para jogar no mobile, use o modo paisagem (horizontal).</p>
+      </div>
+    </div>
+
+    <main id="app">
+      <section id="home-screen" class="panel">
+        <h1>Cartada Royale</h1>
+        <p class="subtitle">Arena 2D com cartas, mobilidade e combate em tempo real.</p>
+
+        <div class="form-row">
+          <label for="player-name">Seu nome</label>
+          <input id="player-name" type="text" maxlength="16" placeholder="Digite seu nome" />
+        </div>
+
+        <div class="actions">
+          <button id="create-room-btn" class="primary">Criar sala</button>
+        </div>
+
+        <div class="join-box">
+          <input id="join-code-input" type="text" maxlength="4" placeholder="Codigo da sala" />
+          <button id="join-code-btn">Entrar por codigo</button>
+        </div>
+
+        <h2>Salas abertas</h2>
+        <div id="room-list" class="room-list"></div>
+      </section>
+
+      <section id="room-screen" class="panel hidden">
+        <div class="row between">
+          <h2>Sala <span id="room-code-label">----</span></h2>
+          <button id="leave-room-btn" class="danger">Sair</button>
+        </div>
+        <p id="room-status">Aguardando jogadores...</p>
+        <ul id="room-players" class="players-list"></ul>
+        <div id="room-settings" class="room-settings">
+          <h3>Configuracoes da sala</h3>
+          <div class="settings-grid">
+            <label for="max-pickups-select">Limite maximo de poderes no mapa</label>
+            <select id="max-pickups-select">
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+
+            <label for="round-duration-select">Tempo da partida</label>
+            <select id="round-duration-select">
+              <option value="120">2 minutos</option>
+              <option value="180">3 minutos</option>
+              <option value="240">4 minutos</option>
+              <option value="300">5 minutos</option>
+            </select>
+          </div>
+
+          <p class="settings-subtitle">Poderes que podem nascer no mapa</p>
+          <div id="power-options" class="power-options"></div>
+        </div>
+        <div id="host-controls" class="actions hidden">
+          <button id="start-game-btn" class="primary">Iniciar partida</button>
+        </div>
+      </section>
+
+      <section id="game-screen" class="hidden">
+        <canvas id="game-canvas"></canvas>
+
+        <div id="top-hud">
+          <div class="health-box">
+            <span>Vida</span>
+            <div class="health-track">
+              <div id="health-fill"></div>
+            </div>
+          </div>
+          <div id="timer-label">02:00</div>
+          <div id="kills-label">Kills: 0</div>
+        </div>
+
+        <div id="cards-bar">
+          <button data-slot="0" class="card-slot"><img alt="Carta 1" /><span>1</span></button>
+          <button data-slot="1" class="card-slot"><img alt="Carta 2" /><span>2</span></button>
+          <button data-slot="2" class="card-slot"><img alt="Carta 3" /><span>3</span></button>
+        </div>
+
+        <div id="mobile-controls" class="hidden">
+          <div class="dpad">
+            <button data-move="up">▲</button>
+            <button data-move="left">◀</button>
+            <button data-move="right">▶</button>
+            <button data-move="down">▼</button>
+          </div>
+          <div class="actions-mobile">
+            <button id="jump-btn">Pular</button>
+            <button id="slide-btn">Deslizar</button>
+          </div>
+        </div>
+
+        <div id="end-overlay" class="overlay hidden">
+          <div class="overlay-card end-card">
+            <h2>Fim da rodada</h2>
+            <ol id="ranking-list"></ol>
+            <div id="end-host-controls" class="actions hidden">
+              <button id="restart-btn" class="primary">Reiniciar</button>
+              <button id="close-room-btn" class="danger">Sair da sala</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
